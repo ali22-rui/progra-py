@@ -1,1 +1,61 @@
 
+class usuario:
+    def __init__(self,idPer,nombre,email,tel):
+        self.id_p=idPer
+        self.nombre_usuario=nombre
+        self.mail=email
+        self.telefono=tel
+
+class empleado:
+    def __init__(self,idPersona,nombre,email,tel,idEmp,rol,hor):
+        self.id_p=idPersona
+        self.nombre_completo=nombre
+        self.email=email
+        self.telefono=tel
+        self.id_e=idEmp
+        self.puesto=rol
+        self.horario=hor
+
+class pelicula:
+    def __init__(self,titulo,duracion,claf,genero):
+        self.titulo=titulo
+        self.duracion=duracion
+        self.clasif=claf
+        self.gen=genero
+    def obtenerSinopsis(self):
+        return "pelicula de genero "+self.gen+": "+self.titulo
+
+class sala:
+    def __init__(self,tipo,capacidadTotal,esVip):
+        self.tipo=tipo
+        self.cap=capacidadTotal
+        self.vip=esVip
+
+class producto:
+    def __init__(self,codigoProd,nombre,precio):
+        self.cod=codigoProd
+        self.n=nombre
+        self.p=precio
+
+class promocion:
+    def __init__(self,codigo,descr,porcentajeDesc,expiracion):
+        self.c=codigo
+        self.p=porcentajeDesc
+    def aplicarDescuento(self,monto):
+        return monto-(monto*(self.p/100))
+
+class reserva:
+    def __init__(self,idReserva,asientos,montoTotal,estado):
+        self.id_r=idReserva
+        self.lugares=asientos
+        self.monto=montoTotal
+        self.est=estado
+    def confirmarPago(self):
+        self.est="PAGADA"
+        print("pago de la reserva "+str(self.id_r)+" confirmado ok")
+
+class espacio:
+    def __init__(self,idEspacio,nombre,ubicacion):
+        self.id_e=idEspacio
+        self.nombre=nombre
+        self.ubi=ubicacion
