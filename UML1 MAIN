@@ -1,1 +1,158 @@
 
+from models import *
+
+print("REGISTRO MANUAL DE INVENTARIO COMPLETO")
+
+
+p1=pelicula("Jujutsu Kaisen",100,"B","Anime")
+p2=pelicula("Kung Fu Panda 2",90,"A","Animacion")
+p3=pelicula("Ghostbusters",105,"B","Comedia")
+p4=pelicula("Batman",150,"B","Ciencia Ficcion")
+p5=pelicula("Spiderman",140,"B","Ciencia Ficcion")
+p6=pelicula("Toy Story",80,"A","Infantil")
+p7=pelicula("El Padrino",175,"C","Drama")
+p8=pelicula("Titanic",195,"B","Romance")
+p9=pelicula("Alien",117,"C","Terror")
+p10=pelicula("Moana",103,"A","Infantil")
+
+print("\nLISTA DE PELICULAS:")
+lp=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]
+for p in lp:
+    print("Titulo:",p.titulo,"| Duracion:",p.duracion,"min | Clasif:",p.clasif,"| Genero:",p.gen)
+
+
+u1=usuario(1,"Carlos","c@m.com","5511")
+u2=usuario(2,"Ana","a@m.com","5522")
+u3=usuario(3,"Pedro","p@m.com","5533")
+u4=usuario(4,"Laura","l@m.com","5544")
+u5=usuario(5,"Roberto","r@m.com","5555")
+u6=usuario(6,"Santiago","s@m.com","5566")
+u7=usuario(7,"Fernanda","f@m.com","5577")
+u8=usuario(8,"Daniela","d@m.com","5588")
+u9=usuario(9,"Monica","m@m.com","5599")
+u10=usuario(10,"Hugo","h@m.com","5500")
+
+print("\nLISTA DE USUARIOS:")
+lu=[u1,u2,u3,u4,u5,u6,u7,u8,u9,u10]
+for u in lu:
+    print("ID:",u.id_p,"| Usuario:",u.nombre_usuario,"| Email:",u.mail,"| Tel:",u.telefono)
+
+
+e1=empleado(1,"Jose","j@m.com","11",101,"Taquilla","Matutino")
+e2=empleado(2,"Maria","m@m.com","22",102,"Dulceria","Matutino")
+e3=empleado(3,"Luis","l@m.com","33",103,"Limpieza","Vespertino")
+e4=empleado(4,"Ana","a@m.com","44",104,"Gerente","Vespertino")
+e5=empleado(5,"Pedro","p@m.com","55",105,"Seguridad","Nocturno")
+e6=empleado(6,"Rosa","r@m.com","66",106,"Taquilla","Vespertino")
+e7=empleado(7,"Juan","jn@m.com","77",107,"Dulceria","Nocturno")
+e8=empleado(8,"Luz","lz@m.com","88",108,"Proyeccion","Matutino")
+e9=empleado(9,"Raul","rl@m.com","99",109,"Limpieza","Matutino")
+e10=empleado(10,"Sonia","s@m.com","00",110,"Seguridad","Vespertino")
+
+print("\nLISTA DE EMPLEADOS:")
+le=[e1,e2,e3,e4,e5,e6,e7,e8,e9,e10]
+for emp in le:
+    print("Emp ID:",emp.id_e,"| Nombre:",emp.nombre_completo,"| Rol:",emp.puesto,"| Horario:",emp.horario,"| Tel:",emp.telefono)
+
+
+s1=sala("2D",100,False)
+s2=sala("3D",80,False)
+s3=sala("IMAX",50,True)
+s4=sala("4DX",40,True)
+s5=sala("VIP",30,True)
+s6=sala("2D",120,False)
+s7=sala("3D",70,False)
+s8=sala("IMAX",60,True)
+s9=sala("VIP",25,True)
+s10=sala("2D",110,False)
+
+print("\nLISTA DE SALAS:")
+ls=[s1,s2,s3,s4,s5,s6,s7,s8,s9,s10]
+for idx,s in enumerate(ls):
+    print("Sala:",idx+1,"| Tipo:",s.tipo,"| Capacidad:",s.cap,"| Es VIP:",s.vip)
+
+
+pr1=producto(1,"Palomitas G",85.0)
+pr2=producto(2,"Refresco M",45.0)
+pr3=producto(3,"Hot Dog",60.0)
+pr4=producto(4,"Nachos",70.0)
+pr5=producto(5,"Chocolate",35.0)
+pr6=producto(6,"Agua 600ml",30.0)
+pr7=producto(7,"Combo Pareja",210.0)
+pr8=producto(8,"Entrada 2D",80.0)
+pr9=producto(9,"Entrada 3D",95.0)
+pr10=producto(10,"Cubeta Cine",150.0)
+
+print("\nLISTA DE PRODUCTOS:")
+lpr=[pr1,pr2,pr3,pr4,pr5,pr6,pr7,pr8,pr9,pr10]
+for prod in lpr:
+    print("Cod:",prod.cod,"| Producto:",prod.n,"| Precio: $"+str(prod.p))
+
+
+es1=espacio(1,"Entrada","Planta Baja")
+es2=espacio(2,"Dulceria","Planta Baja")
+es3=espacio(3,"Baños H","Planta Baja")
+es4=espacio(4,"Baños M","Planta Baja")
+es5=espacio(5,"Sala Espera","Piso 1")
+es6=espacio(6,"Taquilla 1","Entrada")
+es7=espacio(7,"Taquilla 2","Entrada")
+es8=espacio(8,"Area Juegos","Piso 2")
+es9=espacio(9,"Salida Norte","Lado Norte")
+es10=espacio(10,"Salida Sur","Lado Sur")
+
+print("\nLISTA DE ESPACIOS:")
+les=[es1,es2,es3,es4,es5,es6,es7,es8,es9,es10]
+for e in les:
+    print("ID:",e.id_e,"| Espacio:",e.nombre,"| Ubicacion:",e.ubi)
+
+
+prom1=promocion("PROMO10", "D1", 10, "2026")
+prom2=promocion("PROMO15", "D2", 15, "2026")
+prom3=promocion("ESTUDIANTE", "D3", 20, "2026")
+prom4=promocion("PROMO25", "D4", 25, "2026")
+prom5=promocion("PROMO30", "D5", 30, "2026")
+prom6=promocion("PROMO35", "D6", 35, "2026")
+prom7=promocion("PROMO40", "D7", 40, "2026")
+prom8=promocion("PROMO45", "D8", 45, "2026")
+prom9=promocion("PROMO50", "D9", 50, "2026")
+prom10=promocion("MAXDESC", "D10", 60, "2026")
+
+print("\nLISTA DE PROMOCIONES:")
+lprom=[prom1,prom2,prom3,prom4,prom5,prom6,prom7,prom8,prom9,prom10]
+for prm in lprom:
+    print("Codigo:",prm.c,"| Descuento:",prm.p,"%")
+
+
+r1=reserva(901,["A1"],"80.0","PAGADA")
+r2=reserva(902,["A2"],"80.0","CANCELADA")
+r3=reserva(903,["B1"],"95.0","PAGADA")
+r4=reserva(904,["B2"],"95.0","PENDIENTE")
+r5=reserva(905,["C1"],"150.0","PAGADA")
+r6=reserva(906,["C2"],"150.0","PENDIENTE")
+r7=reserva(907,["D1"],"210.0","PAGADA")
+r8=reserva(908,["D2"],"210.0","PAGADA")
+r9=reserva(909,["E1"],"45.0","CANCELADA")
+r10=reserva(910,["E2"],"45.0","PAGADA")
+
+print("\nLISTA DE RESERVAS:")
+lr=[r1,r2,r3,r4,r5,r6,r7,r8,r9,r10]
+for res in lr:
+    print("Reserva #"+str(res.id_r),"| Asientos:",res.lugares,"| Total: $"+res.monto,"| Estado:",res.est)
+
+print("\nVALIDACIÓN DE DATOS FINALIZADA")
+
+
+print("INICIANDO PROCESO DE RESERVA")
+print("Usuario:",u1.nombre_usuario)
+print("Película:",p1.titulo)
+print("Seleccione asientos: A1, A2, B5")
+print("[ERROR]: El asiento A2 ya está ocupado.")
+
+total_calc=prom3.aplicarDescuento(450.0)
+res_final=reserva(995,["A1","A3","B5"],total_calc,"pendiente")
+
+print("\nResumen de Reserva #"+str(res_final.id_r))
+print("Asientos:",res_final.lugares)
+print("Total Final: $"+str(total_calc))
+res_final.confirmarPago()
+print("\nRETOS CUMPLIDOS")
