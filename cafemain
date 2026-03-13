@@ -1,0 +1,246 @@
+from cafemodels import *
+
+
+# Personas
+p1 = persona(1,"Ali","ali@gmail.com")
+p2 = persona(2,"David","deivid@gmail.com")
+p3 = persona(3,"Carlos","carlos@gmail.com")
+p4 = persona(4,"Maria","maria@gmail.com")
+p5 = persona(5,"Pedro","pedro@gmail.com")
+p6 = persona(6,"Sofia","sofia@gmail.com")
+p7 = persona(7,"Diego","diego@gmail.com")
+p8 = persona(8,"Elena","elena@gmail.com")
+p9 = persona(9,"Miguel","miguel@gmail.com")
+p10 = persona(10,"Laura","laura@gmail.com")
+
+print("\n--- PERSONAS ---")
+print(p1.idPersona, p1.nombre, p1.email)
+print(p2.idPersona, p2.nombre, p2.email)
+print(p3.idPersona, p3.nombre, p3.email)
+print(p4.idPersona, p4.nombre, p4.email)
+print(p5.idPersona, p5.nombre, p5.email)
+print(p6.idPersona, p6.nombre, p6.email)
+print(p7.idPersona, p7.nombre, p7.email)
+print(p8.idPersona, p8.nombre, p8.email)
+print(p9.idPersona, p9.nombre, p9.email)
+print(p10.idPersona, p10.nombre, p10.email)
+
+
+# Clientes
+c1 = cliente(1222,"Gabito","gab@gmail.com",100)
+c2 = cliente(1234,"Pablo","pablo@gmail.com",80)
+c3 = cliente(1354,"Andrea","andrea@gmail.com",60)
+c4 = cliente(1224,"Diana","diana@gmail.com",120)
+c5 = cliente(1445,"Raul","raul@gmail.com",50)
+c6 = cliente(1556,"Carmen","carmen@gmail.com",90)
+c7 = cliente(1777,"Jorge","jorge@gmail.com",30)
+c8 = cliente(1778,"Paola","paola@gmail.com",110)
+c9 = cliente(1779,"Ricardo","ricardo@gmail.com",40)
+c10 = cliente(20000,"Daniela","daniela@gmail.com",70)
+
+print("\n--- CLIENTES ---")
+print(c1.idPersona, c1.nombre, c1.email, c1.puntosFidelidad)
+print(c2.idPersona, c2.nombre, c2.email, c2.puntosFidelidad)
+print(c3.idPersona, c3.nombre, c3.email, c3.puntosFidelidad)
+print(c4.idPersona, c4.nombre, c4.email, c4.puntosFidelidad)
+print(c5.idPersona, c5.nombre, c5.email, c5.puntosFidelidad)
+print(c6.idPersona, c6.nombre, c6.email, c6.puntosFidelidad)
+print(c7.idPersona, c7.nombre, c7.email, c7.puntosFidelidad)
+print(c8.idPersona, c8.nombre, c8.email, c8.puntosFidelidad)
+print(c9.idPersona, c9.nombre, c9.email, c9.puntosFidelidad)
+print(c10.idPersona, c10.nombre, c10.email, c10.puntosFidelidad)
+
+
+# Empleados
+e1 = empleado(4444,"Mario","mario@gmail.com","E01","BARISTA")
+e2 = empleado(2222,"Lucia","lucia@gmail.com","E02","MESERO")
+e3 = empleado(2333,"Oscar","oscar@gmail.com","E03","GERENTE")
+e4 = empleado(2433,"Rosa","rosa@gmail.com","E04","BARISTA")
+e5 = empleado(2544,"Tomas","tomas@gmail.com","E05","MESERO")
+e6 = empleado(2644,"Clara","clara@gmail.com","E06","BARISTA")
+e7 = empleado(2744,"David","david@gmail.com","E07","GERENTE")
+e8 = empleado(2844,"Julia","julia@gmail.com","E08","MESERO")
+e9 = empleado(2944,"Hector","hector@gmail.com","E09","BARISTA")
+e10 = empleado(3044,"Nora","nora@gmail.com","E10","GERENTE")
+
+print("\n--- EMPLEADOS ---")
+print(e1.idPersona, e1.nombre, e1.email, e1.idEmpleado, e1.rol)
+print(e2.idPersona, e2.nombre, e2.email, e2.idEmpleado, e2.rol)
+print(e3.idPersona, e3.nombre, e3.email, e3.idEmpleado, e3.rol)
+print(e4.idPersona, e4.nombre, e4.email, e4.idEmpleado, e4.rol)
+print(e5.idPersona, e5.nombre, e5.email, e5.idEmpleado, e5.rol)
+print(e6.idPersona, e6.nombre, e6.email, e6.idEmpleado, e6.rol)
+print(e7.idPersona, e7.nombre, e7.email, e7.idEmpleado, e7.rol)
+print(e8.idPersona, e8.nombre, e8.email, e8.idEmpleado, e8.rol)
+print(e9.idPersona, e9.nombre, e9.email, e9.idEmpleado, e9.rol)
+print(e10.idPersona, e10.nombre, e10.email, e10.idEmpleado, e10.rol)
+
+
+
+# Bebidas
+b1 = bebida(101,"Cafe",40,"Grande","CALIENTE")
+b2 = bebida(102,"Capuccino",45,"Mediano","CALIENTE")
+b3 = bebida(103,"Latte",50,"Grande","CALIENTE")
+b4 = bebida(104,"Chocolate",42,"Chico","CALIENTE")
+b5 = bebida(105,"Mocha",48,"Grande","CALIENTE")
+b6 = bebida(106,"Frappe",55,"Grande","FRIA")
+b7 = bebida(107,"Te",35,"Mediano","CALIENTE")
+b8 = bebida(108,"Americano",38,"Grande","CALIENTE")
+b9 = bebida(109,"Matcha",52,"Mediano","FRIA")
+b10 = bebida(110,"Espresso",30,"Chico","CALIENTE")
+
+print("\n--- BEBIDAS ---")
+print(b1.idProducto, b1.nombre, b1.precioBase, b1.medida, b1.temperatura)
+print(b2.idProducto, b2.nombre, b2.precioBase, b2.medida, b2.temperatura)
+print(b3.idProducto, b3.nombre, b3.precioBase, b3.medida, b3.temperatura)
+print(b4.idProducto, b4.nombre, b4.precioBase, b4.medida, b4.temperatura)
+print(b5.idProducto, b5.nombre, b5.precioBase, b5.medida, b5.temperatura)
+print(b6.idProducto, b6.nombre, b6.precioBase, b6.medida, b6.temperatura)
+print(b7.idProducto, b7.nombre, b7.precioBase, b7.medida, b7.temperatura)
+print(b8.idProducto, b8.nombre, b8.precioBase, b8.medida, b8.temperatura)
+print(b9.idProducto, b9.nombre, b9.precioBase, b9.medida, b9.temperatura)
+print(b10.idProducto, b10.nombre, b10.precioBase, b10.medida, b10.temperatura)
+
+
+# Postres
+po1 = postre(201,"Brownie",30,False,True)
+po2 = postre(202,"Cheesecake",45,False,False)
+po3 = postre(203,"Galleta",20,False,False)
+po4 = postre(204,"Pastel chocolate",50,False,False)
+po5 = postre(205,"Muffin",28,False,False)
+po6 = postre(206,"Panque",25,False,False)
+po7 = postre(207,"Donut",22,False,False)
+po8 = postre(208,"Tarta",40,False,False)
+po9 = postre(209,"Cupcake",27,False,False)
+po10 = postre(210,"Pay de limon",35,False,False)
+
+print("\n--- POSTRES ---")
+print(po1.idProducto, po1.nombre, po1.precioBase, po1.esVegano, po1.sinGluten)
+print(po2.idProducto, po2.nombre, po2.precioBase, po2.esVegano, po2.sinGluten)
+print(po3.idProducto, po3.nombre, po3.precioBase, po3.esVegano, po3.sinGluten)
+print(po4.idProducto, po4.nombre, po4.precioBase, po4.esVegano, po4.sinGluten)
+print(po5.idProducto, po5.nombre, po5.precioBase, po5.esVegano, po5.sinGluten)
+print(po6.idProducto, po6.nombre, po6.precioBase, po6.esVegano, po6.sinGluten)
+print(po7.idProducto, po7.nombre, po7.precioBase, po7.esVegano, po7.sinGluten)
+print(po8.idProducto, po8.nombre, po8.precioBase, po8.esVegano, po8.sinGluten)
+print(po9.idProducto, po9.nombre, po9.precioBase, po9.esVegano, po9.sinGluten)
+print(po10.idProducto, po10.nombre, po10.precioBase, po10.esVegano, po10.sinGluten)
+
+# Pedidos
+pe1=pedido(1)
+pe2=pedido(2)
+pe3=pedido(3)
+pe4=pedido(4)
+pe5=pedido(5)
+pe6=pedido(6)
+pe7=pedido(7)
+pe8=pedido(8)
+pe9=pedido(9)
+pe10=pedido(10)
+
+print("\n--- PEDIDOS ---")
+print(pe1.idPedido, pe1.estado, pe1.total)
+print(pe2.idPedido, pe2.estado, pe2.total)
+print(pe3.idPedido, pe3.estado, pe3.total)
+print(pe4.idPedido, pe4.estado, pe4.total)
+print(pe5.idPedido, pe5.estado, pe5.total)
+print(pe6.idPedido, pe6.estado, pe6.total)
+print(pe7.idPedido, pe7.estado, pe7.total)
+print(pe8.idPedido, pe8.estado, pe8.total)
+print(pe9.idPedido, pe9.estado, pe9.total)
+print(pe10.idPedido, pe10.estado, pe10.total)
+#Inventario 
+inv1= inventario()
+print("\n--- INVENTARIO ---")
+print(inv1.ingredientes)
+
+
+opcion=0
+
+while opcion !=9:
+    print("\n--- MENU CAFETERIA ---")
+    print("1. Login cliente")
+    print("2. Actualizar perfil cliente")
+    print("3. Realizar pedido")
+    print("4. Ver historial")
+    print("5. Canjear puntos")
+    print("6. Cambiar estado del pedido")
+    print("7. Calcular total del pedido")
+    print("8. Inventario")
+    print("9. Salir")
+
+    opcion = int(input("Elige una opcion: "))
+
+    if opcion == 1:
+        c1.login()
+
+    elif opcion == 2:
+        c1.actualizarPerfil()
+
+    elif opcion == 3:
+        print("\n--- PRODUCTOS DISPONIBLES ---")
+        print("1. Cafe")
+        print("2. Capuccino")
+        print("3. Brownie")
+        print("4. Galleta")
+
+        prod = int(input("Que producto quieres agregar? "))
+
+        if prod == 1:
+            pe1.productos.append(b1)
+            print("Cafe agregado al pedido")
+        elif prod == 2:
+            pe1.productos.append(b2)
+            print("Capuccino agregado al pedido")
+        elif prod == 3:
+            pe1.productos.append(po1)
+            print("Brownie agregado al pedido")
+        elif prod == 4:
+            pe1.productos.append(po2)
+            print("Galleta agregada al pedido")
+        else:
+            print("Opcion no valida")
+
+        c1.historialPedidos.append(pe1)
+        c1.realizarPedido()
+
+    elif opcion==4:
+        c1.consultarHistorial()
+
+    elif opcion==5:
+        c1.canjearPuntos()
+    elif opcion==6:
+        print("Estado actual:", pe1.estado)
+        print("1. PENDIENTE")
+        print("2. PREPARANDO")
+        print("3. ENTREGADO")
+
+        est = int(input("Elige el nuevo estado: "))
+        if est==1:
+            pe1.estado=pedido.pendiente
+        elif est==2:
+            pe1.estado=pedido.preparando
+        elif est==3:
+            pe1.estado=pedido.entregado
+        else:
+            print("Opcion no valida")
+        print("Nuevo estado:", pe1.estado)
+    elif opcion==7:
+        pe1.calcularTotal()
+    elif opcion==8:
+        print("INVENTARIO")
+        print("1. Reducir stock")
+        print("2. Notificar faltante")
+        opi = int(input("Elige una opcion: "))
+        if opi==1:
+            ingrediente = input("Ingrediente: ")
+            cantidad = int(input("Cantidad: "))
+            inv1.reducirStock(ingrediente,cantidad)
+        elif opi==2:
+            inv1.notificarFaltante()
+        else:
+            print("Opcion no valida")
+    elif opcion==9:
+        print("Saliendo del sistema")
+    else:
+        print("Opcion no valida")
