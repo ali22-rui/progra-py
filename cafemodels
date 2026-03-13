@@ -1,0 +1,127 @@
+class persona():
+    def __init__(self, idPersona, nombre, email):
+        self.idPersona=idPersona
+        self.nombre=nombre
+        self.email=email
+
+    def login(self):
+        print(self.nombre, "inicio sesion")
+
+    def actualizarPerfil(self):
+        print(self.nombre, "actualizo perfil")
+    
+
+class cliente(persona):
+    def __init__(self, idPersona, nombre, email, puntos ):
+        self.idPersona=idPersona
+        self.nombre=nombre
+        self.email=email
+        self.puntosFidelidad=puntos
+        self.historialPedidos=[]
+
+    def realizarPedido(self):
+        print(self.nombre,"realizo un pedido")
+
+    def consultarHistorial(self):
+     print("Historial de pedidos:")
+     for p in self.historialPedidos:
+        print("Pedido:", p.idPedido, "| Estado:", p.estado)
+
+    def canjearPuntos(self):
+        print(self.nombre,"canjeo puntos")
+
+
+
+class empleado(persona):
+    def __init__(self, idPersona, nombre, email, idEmpleado, rol):
+        self.idPersona=idPersona
+        self.nombre=nombre
+        self.email=email
+        self.idEmpleado=idEmpleado
+        self.rol=rol
+
+    def actualizarInventario(self):
+        print("inventario actualizado")
+
+    def cambiarEstado(self,nuevoEstado):
+        self.estado = nuevoEstado
+        print("estado del pedido:", self.estado)
+
+    
+
+
+
+
+
+class productoBase():
+    def __init__(self,idProducto,nombre,precioBase):
+        self.idProducto=idProducto
+        self.nombre=nombre
+        self.precioBase=precioBase
+
+
+class bebida(productoBase):
+    def __init__(self,idProducto,nombre,precioBase, medida,temperatura):
+        self.idProducto=idProducto
+        self.nombre=nombre
+        self.precioBase=precioBase
+        self.medida=medida
+        self.temperatura=temperatura
+        self.modificadores=[]
+
+    def agregarExtra(self,extra):
+        self.modificadores.append(extra)
+
+    def calcularPrecioFinal(self):
+        precio=self.precioBase + len(self.modificadores)*5
+        print("precio final:",precio)
+
+
+
+
+class postre(productoBase):
+    def __init__(self,idProducto,nombre,precioBase,vegano,sinGluten):
+        self.idProducto=idProducto
+        self.nombre=nombre
+        self.precioBase=precioBase
+        self.esVegano=vegano
+        self.sinGluten=sinGluten
+    def mostrarPostre(self):
+     print(self.idProducto, self.nombre, self.precioBase, self.esVegano, self.sinGluten)
+
+
+
+
+class pedido():
+
+    pendiente="Pendiente"
+    preparando="Preparando"
+    entregado="Entregado"
+    def __init__(self, idPedido):
+        self.idPedido=idPedido
+        self.productos=[]
+        self.estado=pedido.pendiente
+        self.total=0
+
+    
+    def calcularTotal(self):
+        total=0
+        for a in self.productos:
+            total+=a.precioBase
+        self.total=total
+        print("total del pedido:",self.total)
+
+    def validarStock(self):
+        print("stock validado")
+
+class inventario():
+    def __init__(self):
+        self.ingredientes={"cafe":10,"leche":8,"azucar":15}
+    def reducirStock(self,ingrediente,cantidad):
+        print("stock reducido de: ",cantidad, ingrediente)
+    def notificarFaltante(self):
+        print("ingrediente faltante")
+
+
+        
+
