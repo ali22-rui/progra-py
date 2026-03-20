@@ -1,0 +1,311 @@
+from bibliomodels import *
+
+# personas
+p1=Persona(1,"Ana","ana@gmail.com")
+p2=Persona(2,"Luis","luis@gmail.com")
+p3=Persona(3,"Mario","mario@gmail.com")
+p4=Persona(4,"Sofia","sofia@gmail.com")
+p5=Persona(5,"Elena","elena@gmail.com")
+p6=Persona(6,"Carlos","carlos@gmail.com")
+p7=Persona(7,"Miriam","miriam@gmail.com")
+p8=Persona(8,"Raul","raul@gmail.com")
+p9=Persona(9,"Daniela","daniela@gmail.com")
+p10=Persona(10,"Hugo","hugo@gmail.com")
+
+print("\n-PERSONAS-")
+print(p1.id_persona,p1.nombre,p1.correo)
+print(p2.id_persona,p2.nombre,p2.correo)
+print(p3.id_persona,p3.nombre,p3.correo)
+print(p4.id_persona,p4.nombre,p4.correo)
+print(p5.id_persona,p5.nombre,p5.correo)
+print(p6.id_persona,p6.nombre,p6.correo)
+print(p7.id_persona,p7.nombre,p7.correo)
+print(p8.id_persona,p8.nombre,p8.correo)
+print(p9.id_persona,p9.nombre,p9.correo)
+print(p10.id_persona,p10.nombre,p10.correo)
+
+
+
+# usuarios
+u1=Usuario(11,"Alberto","alberto@gmail.com",3)
+u2=Usuario(12,"Fernanda","fernanda@gmail.com",2)
+u3=Usuario(13,"Jorge","jorge@gmail.com",4)
+u4=Usuario(14,"Paola","paola@gmail.com",2)
+u5=Usuario(15,"Andrea","andrea@gmail.com",3)
+u6=Usuario(16,"Diego","diego@gmail.com",1)
+u7=Usuario(17,"Valeria","valeria@gmail.com",2)
+u8=Usuario(18,"Ricardo","ricardo@gmail.com",3)
+u9=Usuario(19,"Lucia","lucia@gmail.com",2)
+u10=Usuario(20,"Manuel","manuel@gmail.com",4)
+
+print("\n-USUARIOS-")
+print(u1.id_persona,u1.nombre,u1.correo,u1.limite)
+print(u2.id_persona,u2.nombre,u2.correo,u2.limite)
+print(u3.id_persona,u3.nombre,u3.correo,u3.limite)
+print(u4.id_persona,u4.nombre,u4.correo,u4.limite)
+print(u5.id_persona,u5.nombre,u5.correo,u5.limite)
+print(u6.id_persona,u6.nombre,u6.correo,u6.limite)
+print(u7.id_persona,u7.nombre,u7.correo,u7.limite)
+print(u8.id_persona,u8.nombre,u8.correo,u8.limite)
+print(u9.id_persona,u9.nombre,u9.correo,u9.limite)
+print(u10.id_persona,u10.nombre,u10.correo,u10.limite)
+
+
+
+# bibliotecarios
+b1=Bibliotecario(21,"Patricia","patricia@biblio.com")
+b2=Bibliotecario(22,"Ramon","ramon@biblio.com")
+b3=Bibliotecario(23,"Silvia","silvia@biblio.com")
+b4=Bibliotecario(24,"Oscar","oscar@biblio.com")
+b5=Bibliotecario(25,"Diana","diana@biblio.com")
+b6=Bibliotecario(26,"Miguel","miguel@biblio.com")
+b7=Bibliotecario(27,"Rebeca","rebeca@biblio.com")
+b8=Bibliotecario(28,"Ivan","ivan@biblio.com")
+b9=Bibliotecario(29,"Norma","norma@biblio.com")
+b10=Bibliotecario(30,"Pedro","pedro@biblio.com")
+
+print("\n-BIBLIOTECARIOS-")
+print(b1.id_persona,b1.nombre,b1.correo)
+print(b2.id_persona,b2.nombre,b2.correo)
+print(b3.id_persona,b3.nombre,b3.correo)
+print(b4.id_persona,b4.nombre,b4.correo)
+print(b5.id_persona,b5.nombre,b5.correo)
+print(b6.id_persona,b6.nombre,b6.correo)
+print(b7.id_persona,b7.nombre,b7.correo)
+print(b8.id_persona,b8.nombre,b8.correo)
+print(b9.id_persona,b9.nombre,b9.correo)
+print(b10.id_persona,b10.nombre,b10.correo)
+
+
+# materiales
+m1=Material(1,"Recurso 1",2018,True)
+m2=Material(2,"Recurso 2",2019,True)
+m3=Material(3,"Recurso 3",2020,False)
+m4=Material(4,"Recurso 4",2017,True)
+m5=Material(5,"Recurso 5",2016,True)
+m6=Material(6,"Recurso 6",2015,False)
+m7=Material(7,"Recurso 7",2021,True)
+m8=Material(8,"Recurso 8",2022,True)
+m9=Material(9,"Recurso 9",2023,False)
+m10=Material(10,"Recurso 10",2024,True)
+
+print("\n-MATERIALES-")
+print(m1.id_material,m1.titulo,m1.anio,m1.disponible)
+print(m2.id_material,m2.titulo,m2.anio,m2.disponible)
+print(m3.id_material,m3.titulo,m3.anio,m3.disponible)
+print(m4.id_material,m4.titulo,m4.anio,m4.disponible)
+print(m5.id_material,m5.titulo,m5.anio,m5.disponible)
+print(m6.id_material,m6.titulo,m6.anio,m6.disponible)
+print(m7.id_material,m7.titulo,m7.anio,m7.disponible)
+print(m8.id_material,m8.titulo,m8.anio,m8.disponible)
+print(m9.id_material,m9.titulo,m9.anio,m9.disponible)
+print(m10.id_material,m10.titulo,m10.anio,m10.disponible) 
+# no imprimi disponible por estetica
+
+
+
+
+# libros
+l1=Libro(101,"Cien años de soledad",1967,"Gabriel Garcia Marquez","ISBN001","Novela",True)
+l2=Libro(102,"El principito",1943,"Antoine de Saint Exupery","ISBN002","Infantil",True)
+l3=Libro(103,"Don Quijote",1605,"Miguel de Cervantes","ISBN003","Clasico",True)
+l4=Libro(104,"Rayuela",1963,"Julio Cortazar","ISBN004","Novela",False)
+l5=Libro(105,"Pedro Paramo",1955,"Juan Rulfo","ISBN005","Literatura",True)
+l6=Libro(106,"1984",1949,"George Orwell","ISBN006","Distopia",True)
+l7=Libro(107,"It",1986,"Stephen King","ISBN007","Terror",True)
+l8=Libro(108,"Hamlet",1603,"William Shakespeare","ISBN008","Drama",False)
+l9=Libro(109,"La Odisea",-700,"Homero","ISBN009","Epica",True)
+l10=Libro(110,"Aura",1962,"Carlos Fuentes","ISBN010","Novela",True)
+
+
+print("\n-LIBROS-")
+print(l1.id_material,l1.titulo,l1.autor,l1.genero)
+print(l2.id_material,l2.titulo,l2.autor,l2.genero)
+print(l3.id_material,l3.titulo,l3.autor,l3.genero)
+print(l4.id_material,l4.titulo,l4.autor,l4.genero)
+print(l5.id_material,l5.titulo,l5.autor,l5.genero)
+print(l6.id_material,l6.titulo,l6.autor,l6.genero)
+print(l7.id_material,l7.titulo,l7.autor,l7.genero)
+print(l8.id_material,l8.titulo,l8.autor,l8.genero)
+print(l9.id_material,l9.titulo,l9.autor,l9.genero)
+print(l10.id_material,l10.titulo,l10.autor,l10.genero)
+# no imprimi disponible por estetica
+
+
+
+
+# revistas
+r1=Revista(201,"Nat Geo Enero",2024,1,"Mensual",True)
+r2=Revista(202,"Nat Geo Febrero",2024,2,"Mensual",True)
+r3=Revista(203,"Muy Interesante",2023,15,"Mensual",False)
+r4=Revista(204,"Ciencia y Desarrollo",2022,10,"Bimestral",True)
+r5=Revista(205,"Historia MX",2021,8,"Mensual",True)
+r6=Revista(206,"PC World",2020,20,"Mensual",True)
+r7=Revista(207,"Arte Hoy",2024,3,"Trimestral",False)
+r8=Revista(208,"Salud Activa",2023,9,"Mensual",True)
+r9=Revista(209,"Mundo Univ",2022,14,"Semestral",True)
+r10=Revista(210,"Ing Moderna",2024,4,"Mensual",True)
+
+
+print("\n-REVISTAS-")
+print(r1.id_material,r1.titulo,r1.edicion,r1.periodicidad)
+print(r2.id_material,r2.titulo,r2.edicion,r2.periodicidad)
+print(r3.id_material,r3.titulo,r3.edicion,r3.periodicidad)
+print(r4.id_material,r4.titulo,r4.edicion,r4.periodicidad)
+print(r5.id_material,r5.titulo,r5.edicion,r5.periodicidad)
+print(r6.id_material,r6.titulo,r6.edicion,r6.periodicidad)
+print(r7.id_material,r7.titulo,r7.edicion,r7.periodicidad)
+print(r8.id_material,r8.titulo,r8.edicion,r8.periodicidad)
+print(r9.id_material,r9.titulo,r9.edicion,r9.periodicidad)
+print(r10.id_material,r10.titulo,r10.edicion,r10.periodicidad)
+# no imprimi disponible por estetica
+
+
+
+
+# materiañ digital
+d1=MaterialDigital(301,"Python PDF",2024,"pdf","url1",5,True)
+d2=MaterialDigital(302,"POO EPUB",2023,"epub","url2",3,True)
+d3=MaterialDigital(303,"Calculo Video",2024,"mp4","url3",120,True)
+d4=MaterialDigital(304,"Algebra PDF",2022,"pdf","url4",8,False)
+d5=MaterialDigital(305,"BD ZIP",2021,"zip","url5",55,True)
+d6=MaterialDigital(306,"Java PDF",2020,"pdf","url6",6,True)
+d7=MaterialDigital(307,"Redes PPT",2023,"ppt","url7",12,True)
+d8=MaterialDigital(308,"SO PDF",2024,"pdf","url8",4,False)
+d9=MaterialDigital(309,"IA PDF",2025,"pdf","url9",10,True)
+d10=MaterialDigital(310,"HTML MP4",2024,"mp4","url10",200,True)
+
+
+print("\n-DIGITAL-")
+print(d1.id_material,d1.titulo,d1.tipo,d1.tam)
+print(d2.id_material,d2.titulo,d2.tipo,d2.tam)
+print(d3.id_material,d3.titulo,d3.tipo,d3.tam)
+print(d4.id_material,d4.titulo,d4.tipo,d4.tam)
+print(d5.id_material,d5.titulo,d5.tipo,d5.tam)
+print(d6.id_material,d6.titulo,d6.tipo,d6.tam)
+print(d7.id_material,d7.titulo,d7.tipo,d7.tam)
+print(d8.id_material,d8.titulo,d8.tipo,d8.tam)
+print(d9.id_material,d9.titulo,d9.tipo,d9.tam)
+print(d10.id_material,d10.titulo,d10.tipo,d10.tam)
+# no imprimi disponible por estetica
+
+
+
+# sucursales
+s1=Sucursal(1,"Centro")
+s2=Sucursal(2,"Norte")
+s3=Sucursal(3,"Sur")
+s4=Sucursal(4,"Oriente")
+s5=Sucursal(5,"Poniente")
+s6=Sucursal(6,"BUAP")
+s7=Sucursal(7,"CS")
+s8=Sucursal(8,"Medicina")
+s9=Sucursal(9,"Arqui")
+s10=Sucursal(10,"Movil")
+
+print("\n-SUCURSALES-")
+print(s1.id_sucursal,s1.nombre,len(s1.lista_mat))
+print(s2.id_sucursal,s2.nombre,len(s2.lista_mat))
+print(s3.id_sucursal,s3.nombre,len(s3.lista_mat))
+print(s4.id_sucursal,s4.nombre,len(s4.lista_mat))
+print(s5.id_sucursal,s5.nombre,len(s5.lista_mat))
+print(s6.id_sucursal,s6.nombre,len(s6.lista_mat))
+print(s7.id_sucursal,s7.nombre,len(s7.lista_mat))
+print(s8.id_sucursal,s8.nombre,len(s8.lista_mat))
+print(s9.id_sucursal,s9.nombre,len(s9.lista_mat))
+print(s10.id_sucursal,s10.nombre,len(s10.lista_mat))
+
+
+
+# prestamos
+pr1=Prestamo(1,"01/03/2026","10/03/2026",u1,l1)
+pr2=Prestamo(2,"02/03/2026","11/03/2026",u2,l2)
+pr3=Prestamo(3,"03/03/2026","12/03/2026",u3,l3)
+pr4=Prestamo(4,"04/03/2026","13/03/2026",u4,l4)
+pr5=Prestamo(5,"05/03/2026","14/03/2026",u5,l5)
+pr6=Prestamo(6,"06/03/2026","15/03/2026",u6,l6)
+pr7=Prestamo(7,"07/03/2026","16/03/2026",u7,l7)
+pr8=Prestamo(8,"08/03/2026","17/03/2026",u8,l8)
+pr9=Prestamo(9,"09/03/2026","18/03/2026",u9,l9)
+pr10=Prestamo(10,"10/03/2026","19/03/2026",u10,l10)
+
+print("\n-PRESTAMOS-")
+print(pr1.id_prestamo,pr1.usuario.nombre,pr1.material.titulo,pr1.fi,pr1.fd)
+print(pr2.id_prestamo,pr2.usuario.nombre,pr2.material.titulo,pr2.fi,pr2.fd)
+print(pr3.id_prestamo,pr3.usuario.nombre,pr3.material.titulo,pr3.fi,pr3.fd)
+print(pr4.id_prestamo,pr4.usuario.nombre,pr4.material.titulo,pr4.fi,pr4.fd)
+print(pr5.id_prestamo,pr5.usuario.nombre,pr5.material.titulo,pr5.fi,pr5.fd)
+print(pr6.id_prestamo,pr6.usuario.nombre,pr6.material.titulo,pr6.fi,pr6.fd)
+print(pr7.id_prestamo,pr7.usuario.nombre,pr7.material.titulo,pr7.fi,pr7.fd)
+print(pr8.id_prestamo,pr8.usuario.nombre,pr8.material.titulo,pr8.fi,pr8.fd)
+print(pr9.id_prestamo,pr9.usuario.nombre,pr9.material.titulo,pr9.fi,pr9.fd)
+print(pr10.id_prestamo,pr10.usuario.nombre,pr10.material.titulo,pr10.fi,pr10.fd)
+
+
+
+# penalizacion
+pen1=Penalizacion(0,"tarde",False)
+pen2=Penalizacion(20,"libro roto",False)
+pen3=Penalizacion(50,"perdida",False)
+pen4=Penalizacion(10,"retraso",True)
+pen5=Penalizacion(30,"mojado",False)
+pen6=Penalizacion(15,"fuera de fecha",True)
+pen7=Penalizacion(0,"sin problema",True)
+pen8=Penalizacion(25,"incompleto",False)
+pen9=Penalizacion(18,"hojas dañadas",False)
+pen10=Penalizacion(5,"leve retraso",True)
+
+
+print("\n-PENALIZACIONES-")
+print(pen1.monto,pen1.motivo,pen1.pagada)
+print(pen2.monto,pen2.motivo,pen2.pagada)
+print(pen3.monto,pen3.motivo,pen3.pagada)
+print(pen4.monto,pen4.motivo,pen4.pagada)
+print(pen5.monto,pen5.motivo,pen5.pagada)
+print(pen6.monto,pen6.motivo,pen6.pagada)
+print(pen7.monto,pen7.motivo,pen7.pagada)
+print(pen8.monto,pen8.motivo,pen8.pagada)
+print(pen9.monto,pen9.motivo,pen9.pagada)
+print(pen10.monto,pen10.motivo,pen10.pagada)
+
+
+
+
+
+
+op=0
+while op!=6:
+    print()
+    print("menu")
+    print("1 personas")
+    print("2 usuarios")
+    print("3 libros")
+    print("4 pruebas")
+    print("5 sucursales")
+    print("6 salir")
+    op=int(input("opcion: "))
+    if op==1:
+        p1.mostrar_datos()
+        p2.mostrar_datos()
+    elif op==2:
+        u1.mostrar_datos()
+        u2.mostrar_datos()
+    elif op==3:
+        l1.mostrar_material()
+        l2.mostrar_material()
+    elif op==4:
+        print("prestamos usuario")
+        u1.ver_prestamos()
+        print("multa")
+        pen1.calcular(3)
+        print("transferir")
+        b1.transferir_material(l1,s1,s2)
+    elif op==5:
+        s1.mostrar_sucursal()
+        s2.mostrar_sucursal()
+    elif op==6:
+        print("fin")
+    else:
+        print("no existe")
+
+        
