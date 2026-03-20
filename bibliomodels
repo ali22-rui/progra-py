@@ -1,0 +1,176 @@
+class Persona():
+    def __init__(self,id_persona,nombre,correo):
+        self.id_persona=id_persona
+        self.nombre=nombre
+        self.correo=correo
+
+    def mostrar_datos(self):
+        print("id:",self.id_persona)
+        print("nombre:",self.nombre)
+        print("correo:",self.correo)
+
+class Usuario(Persona):
+    def __init__(self,id_persona,nombre,correo,limite):
+        super().__init__(id_persona,nombre,correo)
+        self.limite=limite
+        self.lista=[]
+
+    def solicitar_prestamo(self,prestamo):
+        if self.lista==[] or len(self.lista)<self.limite:
+            self.lista.append(prestamo)
+            print("prestamo agregado")
+        else:
+            print("ya no puede pedir mas")
+
+    def ver_prestamos(self):
+        if self.lista==[]:
+            print("no tiene prestamos")
+        else:
+            print("prestamos de",self.nombre)
+            for p in self.lista:
+                print(p.id_prestamo,p.material.titulo)
+
+    def mostrar_datos(self):
+        print("id:",self.id_persona)
+        print("nombre:",self.nombre)
+        print("correo:",self.correo)
+        print("limite:",self.limite)
+
+
+class Bibliotecario(Persona):
+    def __init__(self,id_persona,nombre,correo):
+        super().__init__(id_persona,nombre,correo)
+
+    def gestionar_prestamo(self,usuario,material,id_prestamo,fi,fd):
+        if material.disponible==True:
+            p=Prestamo(id_prestamo,fi,fd,usuario,material)
+            material.disponible=False
+            usuario.solicitar_prestamo(p)
+            print("prestamo hecho")
+            return p
+        else:
+            print("no disponible")
+            return None
+
+    def transferir_material(self,material,s1,s2):
+        if material in s1.lista_mat:
+            s1.lista_mat.remove(material)
+            s2.lista_mat.append(material)
+            print("movido")
+        else:
+            print("no esta en sucursal")
+
+
+class Material():
+    def __init__(self,id_material,titulo,anio,disponible=True):
+        self.id_material=id_material
+        self.titulo=titulo
+        self.anio=anio
+        self.disponible=disponible
+
+    def mostrar_material(self):
+        print(self.id_material,self.titulo,self.anio,self.disponible)
+
+
+class Libro(Material):
+    def __init__(self,id_material,titulo,anio,autor,isbn,genero,disponible=True):
+        super().__init__(id_material,titulo,anio,disponible)
+        self.autor=autor
+        self.isbn=isbn
+        self.genero=genero
+
+    def mostrar_material(self):
+        print(self.id_material,self.titulo,self.autor,self.genero)
+
+
+class Revista(Material):
+    def __init__(self,id_material,titulo,anio,edicion,periodicidad,disponible=True):
+        super().__init__(id_material,titulo,anio,disponible)
+        self.edicion=edicion
+        self.periodicidad=periodicidad
+
+    def mostrar_material(self):
+        print(self.id_material,self.titulo,self.edicion,self.periodicidad)
+
+
+class MaterialDigital(Material):
+    def __init__(self,id_material,titulo,anio,tipo,url,tam,disponible=True):
+        super().__init__(id_material,titulo,anio,disponible)
+        self.tipo=tipo
+        self.url=url
+        self.tam=tam
+
+    def mostrar_material(self):
+        print(self.id_material,self.titulo,self.tipo,self.tam)
+
+
+class Sucursal():
+    def __init__(self,id_sucursal,nombre):
+        self.id_sucursal=id_sucursal
+        self.nombre=nombre
+        self.lista_mat=[]
+
+    def agregar_material(self,material):
+        self.lista_mat.append(material)
+        print("agregado")
+
+    def mostrar_catalogo(self):
+        if self.lista_mat==[]:
+            print("no hay nada")
+        else:
+            for m in self.lista_mat:
+                print(m.titulo)
+
+    def mostrar_sucursal(self):
+        print(self.id_sucursal,self.nombre,len(self.lista_mat))
+
+
+class Prestamo():
+    def __init__(self,id_prestamo,fi,fd,usuario,material):
+        self.id_prestamo=id_prestamo
+        self.fi=fi
+        self.fd=fd
+        self.usuario=usuario
+        self.material=material
+
+    def mostrar_prestamo(self):
+        print(self.id_prestamo,self.usuario.nombre,self.material.titulo,self.fi,self.fd)
+
+    def devolver(self):
+        self.material.disponible=True
+        print("devuelto")
+
+
+class Penalizacion():
+    def __init__(self,monto,motivo,pagada=False):
+        self.monto=monto
+        self.motivo=motivo
+        self.pagada=pagada
+
+    def calcular(self,dias):
+        self.monto=dias*10
+        print("multa:",self.monto)
+
+    def bloquear(self,usuario):
+        print("bloqueado",usuario.nombre)
+
+    def mostrar(self):
+        print(self.monto,self.motivo,self.pagada)
+
+
+class Catalogo():
+    def __init__(self,sucs):
+        self.sucs=sucs
+
+    def buscar_autor(self,autor):
+        for s in self.sucs:
+            for m in s.lista_mat:
+                if isinstance(m,Libro):
+                    if m.autor==autor:
+                        print(m.titulo,"en",s.nombre)
+
+    def buscar_titulo(self,titulo):
+        for s in self.sucs:
+            for m in s.lista_mat:
+                if titulo in m.titulo:
+                    print(m.titulo,"en",s.nombre)
